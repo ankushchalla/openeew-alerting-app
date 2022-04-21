@@ -38,6 +38,7 @@ export default function Alert(props: AlertProps) {
 const styles = StyleSheet.create({
     alertContainer: {
       width: "100%",
+      height: "30%",
       // borderWidth: 3,
       borderRadius: 5,
       // position: 'absolute',
