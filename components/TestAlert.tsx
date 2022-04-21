@@ -3,7 +3,7 @@ import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useState } from "react";
 import Alert from "./Alert";
 
-export default function TestAlert() {
+export default function TestAlert(props: any) {
   const [alertVisible, setAlertVisible] = useState(false)
 
   const onPressLearnMore = () => {
@@ -14,13 +14,17 @@ export default function TestAlert() {
     setAlertVisible(true)
   }
 
+  const onPressExit = () => {
+    props.navigation.popToTop()
+  }
+
   return (
     <View style={[styles.container, {
       backgroundColor: alertVisible ? "#afafaf" : "#fff"
     }]}>
       <View style={styles.body}>
         <Alert visible={alertVisible} setVisible={setAlertVisible} />
-        <Feather name="x" size={20} color="black" />
+        <Feather name="x" size={20} color="black" onPress={onPressExit} />
         <Text style={styles.header}>Make sure you'll notice the alerts</Text>
         <View style={styles.main}>
           <MaterialCommunityIcons name="cellphone-wireless" size={70} color="black" />
