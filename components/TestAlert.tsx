@@ -35,7 +35,7 @@ export default function TestAlert(props: any) {
           <Text style={styles.buttonText}>Send me a test alert</Text>
         </Pressable>
         <Pressable style={styles.button} onPress={onPressLearnMore}>
-          <Text style={styles.buttonText}>Get started</Text>
+          <Text style={styles.buttonText}>Next</Text>
         </Pressable>
       </View>
     </View>
