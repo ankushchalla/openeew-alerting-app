@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Welcome from "./components/Welcome";
 import TestAlert from "./components/TestAlert";
 import SidePanel from "./components/SidePanel";
+import Settings from "./components/Settings";
 
 const Stack = createNativeStackNavigator();
 
@@ -28,7 +29,7 @@ function App() {
     //       }} />
     //   </Stack.Navigator>
     // </NavigationContainer>
-    <SidePanel />
+    <Settings />
   );
 }
 
